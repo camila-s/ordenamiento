@@ -51,4 +51,12 @@ main(){
 		for(int i=0;i<cant;i++){	
 		printf("\t %d ,",v[i]);
 	}
+	 break;
+	        
+	    case 5:CargarVector(v,cant);
+	    nromax = cant;
+		mergeSort(v,nromin,nromax-1);
+	    for(int i=0;i<cant;i++){	
+		printf("\t %d ,",v[i]);
+	}
 		
