@@ -48,3 +48,5 @@ main(){
 	    case 4: CargarVector(v,cantidad);
 	    nromax = cantidad;
 		miquicksort(v,nromin,nromax-1);
+		for()
+		
