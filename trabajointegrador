@@ -48,3 +48,6 @@ main(){
 	    case 4: CargarVector(v,cantidad);
 	    nromax = cantidad;
 		miquicksort(v,nromin,nromax-1);
+           for(int i=0;i<cant;i++){       	
+		printf("\t %d ,",v[i]);
+	}
