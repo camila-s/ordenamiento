@@ -64,3 +64,15 @@ main(){
 	    default:
                 printf("LA OPCION ELEGIDA NO ES CORRECTA.");
                 printf("Por favor, seleccione una opción dentro de las proporcionadas.");
+	}
+	printf("\n\n\n");
+	system("PAUSE");
+
+ 
+}
+
+void CargarVector(int v[],int &cant){
+	printf("\n *Ingrese la cantidad de datos a proporcionar: ");
+    scanf("%d",&cant);
+    printf("\n");
+	for(int i= 0; i <cant ; i++)
