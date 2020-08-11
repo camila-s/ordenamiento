@@ -71,8 +71,12 @@ main(){
  
 }
 
-void CargarVector(int v[],int &cant){
+void CargarVector(int v[],int &cantidad){
 	printf("\n *Ingrese la cantidad de datos a proporcionar: ");
-    scanf("%d",&cant);
+    scanf("%d",&cantidad);
     printf("\n");
-	for(int i= 0; i <cant ; i++)
+	for(int i= 0; i <cantidad ; i++)
+	printf("\n *Ingrese un numero: ");
+	        scanf("%d", &v[i]);
+	}
+}
