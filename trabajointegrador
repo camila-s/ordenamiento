@@ -3,7 +3,6 @@
 #include<stdlib.h>
 #include<time.h>
 #include<locale.h>
-#include'ordenamiento.h'
 
 void CargarVector(int v[],int &cant);
 void menu();
@@ -13,9 +12,8 @@ void seleccion(int v[],int &cant);
 void quicksort(int v[],int &cant);
 void mergeSort(int v[],int &cant);
 int Opc=0;
-main(){
-	int v[500],Opc,cantidad, nromax,nromin;
-	
+ main(){
+	int v[500],cant,nromax,nromin=0,m;
 	printf("\n *Ingrese la cantidad de datos a proporcionar: ");scanf("%d",&cant);
 	v[cant];
 	CargarVector(v,cant);
@@ -92,5 +90,5 @@ void menu(){
 	printf("\t**\t4. Quicksort                                    **\n");
 	printf("\t**\t5. Mergesort                                    **\n");
 	printf("\t**********************************************************\n");
-	printf("\n Opcion: ");scanf("%d", &Opc);
+	printf("\n *Opcion: ");scanf("%d", &Opc);
 }
