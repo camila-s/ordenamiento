@@ -1,21 +1,89 @@
 #include<stdio.h>
 #include<conio.h>
 #include<stdlib.h>
+#include<time.h>
+#include<locale.h>
 
 void CargarVector(int v[],int &cantidad);
+void menu();
 void burbuja(int v[],int   &cantidad);
 void Insercion(int v[],int &cantidad);
 void seleccion(int v[],int &cantidad);
 void quicksort(int v[],int &cantidad);
 void mergeSort(int v[],int &cantidad);
-
+int Opc=0;
 main(){
 	int v[500],Opc,cantidad, nromax,nromin;
 	
+	printf("\n *Ingrese la cantidad de datos a proporcionar: ");scanf("%d",&cant);
+	v[cant];
+	CargarVector(v,cant);
+	printf("\n\n\n");
+    system("pause");
+	menu();
+	switch(Opc){
+		case 1:
+		    system("cls");
+		    void burbuja(int v[],int &cant);
+		    //burbuja(v, cant);//
+	        for(int i=0;i<cant;i++){
+		        printf("\t %d ,",v[i]);
+	    }break;       
+	    case 2:
+	        system("cls");
+	        void Insercion(int v[],int &cant);
+		    insercion(v,cant);
+	        for(int i=0;i<cant;i++){	
+		        printf("\t %d ,",v[i]);
+	    }break;       
+	    case 3:
+	    	 system("cls");
+	        nromax = cant;
+	        void seleccion(int v[],int &cant);
+		    seleccion(v,nromax);
+	        for(int i=0;i<cant;i++){	
+		        printf("\t %d ,",v[i]);
+	    }break;
+	    case 4:
+		    system("cls"); 
+	        nromax = cant;
+	        void quicksort(int v[],int &cant);
+            quicksort(v,nromin,nromax-1);
+	        for(int i=0;i<cant;i++){	
+		        printf("\t %d ,",v[i]);
+	    }break;       
+	    case 5:
+	    	system("cls");
+	        nromax = cant;
+	        void mergeSort(int v[],int &cant);
+		    mergeSort(v,nromin,nromax-1);
+	        for(int i=0;i<cant;i++){	
+		        printf("\t %d ,",v[i]);
+        }break;
+	    default:
+		system("cls");
+        printf("LA OPCION ELEGIDA ES INVALIDA.");
+        printf("Por favor, seleccione una opcion dentro de las proporcionadas \n\n\n");
+	}
+}
+
+
+
+void CargarVector(int v[],int &cant){
+    system("cls");
+	srand(time(NULL));
+	for(int i=0;i<cant;i++){
+		v[i]=(1+(rand()%100));
+		printf(" %d ",v[i]);
+	}
+}
+
+void menu(){
+	system("cls");
 	printf("\n\t**********************************************************\n");
 	printf("\t**\t\t\t\ MENU PRINCIPAL\t\t\t**\n");
-	printf("\t**********************************************************\n");	
-	printf("\t**\tElija el metodo de ordenamiento que decea  utilizar:     **\n");
+	printf("\n\t**********************************************************\n");	
+	printf("\n\t**\tElija el metodo de ordenamiento a utilizar:     **\n");
 	printf("\t**                                                      **\n");
 	printf("\t**\t1. Metodo burbuja mejorado                      **\n");
 	printf("\t**\t2. Insercion                                    **\n");
@@ -23,65 +91,5 @@ main(){
 	printf("\t**\t4. Quicksort                                    **\n");
 	printf("\t**\t5. Mergesort                                    **\n");
 	printf("\t**********************************************************\n");
-	printf("\n *Opcion: ");
-	scanf("%d", &Opc);
-	
-	switch(Opc){
-		
-		case 1:
-		 burbuja(v[], &cantidad);
-	    for(int i=0;i<cantidad;i++){
-		printf("\t %d ,",v[i]);
-	}
-	        break;
-	        
-	    case 2:CargarVector(v,cantidad);
-	     Insercion(v[],&cantidad);
-	    for(int i=0;i<cantidad;i++){	
-		printf("\t %d ,",v[i]); 
-	}
-         break; 
-	   
-	     case 3: CargarVector(v,cantidad);
-	    nromax = cantidad;
-		 seleccion(v,nromax);
-	    for(int i=0;i<cantidad;i++){	
-		printf("\t %d ,",v[i]);
-	}
-	   break;
-	        
-	    case 4: CargarVector(v,cantidad);
-	    nromax = cantidad;
-	 miquicksort(v,nromin,nromax-1);
-		for(int i=0;i<cantidad;i++){	
-		printf("\t %d ,",v[i]);
-	}
-	 break;
-	        
-	    case 5:CargarVector(v,cantidad);
-	    nromax = cantidad;
-		mergeSort(v,nromin,nromax-1);
-	    for(int i=0;i<cantidad;i++)	
-		printf("\t %d ,",v[i]);
-	}
-		break;
-	        
-	    default:
-                printf("LA OPCION ELEGIDA NO ES CORRECTA.");
-                printf("Por favor, seleccione una opción dentro de las proporcionadas.");
-	}
-	printf("\n\n\n");
-	system("PAUSE");
-
- 
-}
-
-void CargarVector(int v[],int &cantidad){
-	printf("\n *Ingrese la cantidad de datos a proporcionar: ");
-    scanf("%d",&cantidad);
-    printf("\n");
-	for(int i= 0; i <cantidad ; i++)
-	printf("\n *Ingrese un numero: ");
-	        scanf("%d", &v[i]);
-	}
+	printf("\n *Opcion: ");scanf("%d", &Opc);
 }
