@@ -4,13 +4,13 @@
 #include<time.h>
 #include<locale.h>
 
-void CargarVector(int v[],int &cantidad);
+void CargarVector(int v[],int &cant);
 void menu();
-void burbuja(int v[],int   &cantidad);
-void Insercion(int v[],int &cantidad);
-void seleccion(int v[],int &cantidad);
-void quicksort(int v[],int &cantidad);
-void mergeSort(int v[],int &cantidad);
+void burbuja(int v[],int &cant);
+void Insercion(int v[],int &cant);
+void seleccion(int v[],int &cant);
+void quicksort(int v[],int &cant);
+void mergeSort(int v[],int &cant);
 int Opc=0;
 main(){
 	int v[500],Opc,cantidad, nromax,nromin;
