@@ -9,12 +9,8 @@ void seleccion(int v[],int &cantidad);
 void quicksort(int v[],int &cantidad);
 void mergeSort(int v[],int &cantidad);
 
-
-
-
-
 main(){
-	int v[500],Opc,cantidad, nromax,nromin =0,m;
+	int v[500],Opc,cantidad, nromax,nromin;
 	
 	printf("\n\t**********************************************************\n");
 	printf("\t**\t\t\t\ MENU PRINCIPAL\t\t\t**\n");
@@ -32,15 +28,15 @@ main(){
 	
 	switch(Opc){
 		
-		case 1:CargarVector(v,cantidad);
-		void burbuja(v[], &cantidad);
+		case 1:
+		 burbuja(v[], &cantidad);
 	    for(int i=0;i<cantidad;i++){
 		printf("\t %d ,",v[i]);
 	}
 	        break;
 	        
 	    case 2:CargarVector(v,cantidad);
-	    void Insercion(v[],&cantidad);
+	     Insercion(v[],&cantidad);
 	    for(int i=0;i<cantidad;i++){	
 		printf("\t %d ,",v[i]); 
 	}
@@ -48,7 +44,7 @@ main(){
 	   
 	     case 3: CargarVector(v,cantidad);
 	    nromax = cantidad;
-		seleccion(v,nromax);
+		 seleccion(v,nromax);
 	    for(int i=0;i<cantidad;i++){	
 		printf("\t %d ,",v[i]);
 	}
@@ -56,7 +52,7 @@ main(){
 	        
 	    case 4: CargarVector(v,cantidad);
 	    nromax = cantidad;
-		miquicksort(v,nromin,nromax-1);
+	 miquicksort(v,nromin,nromax-1);
 		for(int i=0;i<cantidad;i++){	
 		printf("\t %d ,",v[i]);
 	}
